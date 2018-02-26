@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <title>Master Mind</title>
+</head>
+
+<body>
+    <img src="images/titulo.png" alt="titulo pagina">
+    <p>Introduce 4 numeros del 0 - 9</p>
+    <div class="flechas">
+        <img onclick="cambiarnumero('n1','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
+        <img onclick="cambiarnumero('n2','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
+        <img onclick="cambiarnumero('n3','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
+        <img onclick="cambiarnumero('n4','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
+    </div>
+
+    <input type="text" class="inputNumeros" maxlength="1" id="n1">
+    <input type="text" class="inputNumeros" maxlength="1" id="n2">
+    <input type="text" class="inputNumeros" maxlength="1" id="n3">
+    <input type="text" class="inputNumeros" maxlength="1" id="n4">
+
+    <div class="flechas">
+        <img onclick="cambiarnumero('n1','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
+        <img onclick="cambiarnumero('n2','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
+        <img onclick="cambiarnumero('n3','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
+        <img onclick="cambiarnumero('n4','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
+    </div>
+
+    <div id="bcontainer">
+        <input id="bcompr" onclick="comprN()" type="button" value="Comprobar Numeros">
+        <input onclick="restart()" type="button" value="Reiniciar Juego">
+    </div>
+    <p id="alerta"></p>
+    <p id="resultadof"></p>
+    <img id="homer" style="display:none" src="images/homer.gif" alt="imagen homer" width="400" height="200">
+    <div id="intcontainer">
+        <p>Registro de intentos:</p>
+    </div>
+    <p style="display:none" id="respuesta">Respuesta</p>
+</body>
+
+</html>

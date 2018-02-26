@@ -1,0 +1,73 @@
+@font-face {
+    font-family: Bit;
+    src: url(fonts/fuente3.ttf);
+}
+
+body {
+    background-image: url(images/bg.jpg);
+    color: white;
+    text-align: center;
+    font-family: Bit;
+}
+
+#intcontainer {
+    margin-top: 10px;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.26);
+}
+
+.inputNumeros {
+    width: 25px;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: Bit;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.26)
+}
+
+.inputNumeros:focus {
+    background-color: rgba(0, 0, 0, 0.10)
+}
+
+.flecha:hover {
+    color: rgba(0, 0, 0, 0.10)
+}
+
+#intcontainer {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#bcontainer>input {
+    font-family: Bit;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.26)
+}
+
+.flechas {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#alerta {
+    color: red;
+}
+
+#resultadof {
+    margin-top: 5px;
+}
+
+#intcontainer>p {
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px
+}
+
+#intcontainer>p:nth-child(2n+1) {
+    background-color: rgba(0, 0, 0, 0.26)
+}

@@ -13,37 +13,57 @@
 
 <body>
     <img src="images/titulo.png" alt="titulo pagina">
-    <p>Introduce 4 numeros del 0 - 9</p>
-    <div class="flechas">
-        <img onclick="cambiarnumero('n1','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
-        <img onclick="cambiarnumero('n2','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
-        <img onclick="cambiarnumero('n3','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
-        <img onclick="cambiarnumero('n4','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
-    </div>
+    <div id="gamecontainer">
+        <div id="nombre">
+            <p>Ingresa el nombre que aparecera en la lista de records</p>
+            <input id="nick" type="text" value="Player">
+        </div>
+        <p>Introduce 4 numeros del 0 - 9</p>
+        <div class="flechas">
+            <img onclick="cambiarnumero('n1','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
+            <img onclick="cambiarnumero('n2','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
+            <img onclick="cambiarnumero('n3','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
+            <img onclick="cambiarnumero('n4','sumar')" src="images/flecha_arriba.png" alt="flecha" class="flecha">
+        </div>
 
-    <input type="text" class="inputNumeros" maxlength="1" id="n1">
-    <input type="text" class="inputNumeros" maxlength="1" id="n2">
-    <input type="text" class="inputNumeros" maxlength="1" id="n3">
-    <input type="text" class="inputNumeros" maxlength="1" id="n4">
+        <input type="text" class="inputNumeros" maxlength="1" id="n1">
+        <input type="text" class="inputNumeros" maxlength="1" id="n2">
+        <input type="text" class="inputNumeros" maxlength="1" id="n3">
+        <input type="text" class="inputNumeros" maxlength="1" id="n4">
 
-    <div class="flechas">
-        <img onclick="cambiarnumero('n1','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
-        <img onclick="cambiarnumero('n2','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
-        <img onclick="cambiarnumero('n3','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
-        <img onclick="cambiarnumero('n4','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
-    </div>
+        <div class="flechas">
+            <img onclick="cambiarnumero('n1','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
+            <img onclick="cambiarnumero('n2','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
+            <img onclick="cambiarnumero('n3','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
+            <img onclick="cambiarnumero('n4','restar')" src="images/flecha_abajo.png" alt="flecha" class="flecha">
+        </div>
 
-    <div id="bcontainer">
-        <input id="bcompr" onclick="comprN()" type="button" value="Comprobar Numeros">
-        <input onclick="restart()" type="button" value="Reiniciar Juego">
+        <div id="bcontainer">
+            <input id="bcompr" onclick="comprN()" type="button" value="Comprobar Numeros">
+            <input onclick="restart()" type="button" value="Reiniciar Juego">
+        </div>
+        <p id="alerta"></p>
+        <p id="resultadof"></p>
+        <div id="intcontainer">
+            <p>Registro de intentos:</p>
+            <div id="intentos"></div>
+        </div>
+        <p id="respuesta">Respuesta</p>
     </div>
-    <p id="alerta"></p>
-    <p id="resultadof"></p>
-    <img id="homer" style="display:none" src="images/homer.gif" alt="imagen homer" width="400" height="200">
-    <div id="intcontainer">
-        <p>Registro de intentos:</p>
+    <div id="scoreboard-container">
+        <p id="top-title">TOP 15 MEJORES</p>
+        <table id="tabla-resultados">
+        </table>
+        <br>
+        <div id="putuacion-container">
+            <p id="puntuacionaux">Tu puntuacion </p>
+            <p id="respuesta" style="
+    display: none;
+">4 0 8 5</p>
+            <br>
+            <input onclick="restart()" type="button" value="Reiniciar Juego">
+        </div>
     </div>
-    <p style="display:none" id="respuesta">Respuesta</p>
 </body>
 
 </html>

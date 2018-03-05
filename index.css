@@ -10,10 +10,29 @@ body {
     font-family: Bit;
 }
 
+#nombre {
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.26);
+    width: 50%;
+    display: inline-block;
+    padding-bottom: 10px;
+    border: 1px solid white
+}
+
+#nombre>input {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.26);
+    font-family: Bit;
+    text-align: center;
+}
+
 #intcontainer {
     margin-top: 10px;
     border: 1px solid white;
     background-color: rgba(0, 0, 0, 0.26);
+    max-height: 300px;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .inputNumeros {
@@ -32,7 +51,8 @@ body {
 }
 
 .flecha:hover {
-    color: rgba(0, 0, 0, 0.10)
+    color: rgba(0, 0, 0, 0.10);
+    cursor: pointer;
 }
 
 #intcontainer {
@@ -45,7 +65,8 @@ body {
     text-align: center;
     font-size: 20px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.26)
+    background-color: rgba(0, 0, 0, 0.26);
+    cursor: pointer;
 }
 
 .flechas {
@@ -61,13 +82,64 @@ body {
     margin-top: 5px;
 }
 
-#intcontainer>p {
+#intcontainer>p,
+#intentos>p {
     margin: 0px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 20px
 }
 
-#intcontainer>p:nth-child(2n+1) {
+#intcontainer>p:nth-child(2n+1),
+#intentos>p:nth-child(2n+1) {
     background-color: rgba(0, 0, 0, 0.26)
+}
+
+#tabla-resultados {
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.26);
+    font-size: 27px;
+}
+
+#scoreboard-container {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+#top-title {
+    font-size: 46px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+#putuacion-container {
+    background-color: #00000069;
+    width: 28%;
+    position: absolute;
+    right: 3%;
+    top: 30%;
+    padding-bottom: 1%;
+}
+
+#puntuacionaux {
+    font-size: 27px;
+}
+
+#tus-puntos {
+    font-size: 55px;
+}
+
+#putuacion-container>input {
+    font-family: Bit;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+}
+
+tr:nth-child(2n+1) {
+    background-color: rgba(0, 0, 0, 0.089);
 }
